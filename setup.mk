@@ -1,3 +1,5 @@
+DOLBY_PATH := vendor/sony/dolby
+
 # Inherit dolby configs
 $(call inherit-product, vendor/sony/dolby/dolby-vendor.mk)
 
@@ -19,4 +21,4 @@ PRODUCT_PRODUCT_PROPERTIES += \
     vendor.audio.dolby.ds2.hardbypass=false
 
 # SEPolicy
-BOARD_VENDOR_SEPOLICY_DIRS += vendor/sony/dolby/sepolicy/vendor
+BOARD_VENDOR_SEPOLICY_DIRS += $(DOLBY_PATH)/sepolicy/vendor
