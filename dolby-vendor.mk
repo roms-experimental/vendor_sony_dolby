@@ -24,4 +24,5 @@ PRODUCT_PACKAGES += \
     vendor.dolby.hardware.dms@2.0 \
     libdlbdsservice \
     vendor.dolby.hardware.dms@2.0-impl \
+    vendor.dolby.hardware.dms.xml \
     vendor.dolby.hardware.dms@2.0-service
