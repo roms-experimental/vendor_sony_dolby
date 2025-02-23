@@ -1,12 +1,13 @@
 # Inherit dolby configs
 $(call inherit-product, vendor/sony/dolby/dolby-vendor.mk)
 
+# Audio configs
+AUDIO_FEATURE_ENABLED_DS2_DOLBY_DAP := true
+TARGET_EXCLUDES_AUDIOFX := true
+
 # DolbyManager
 PRODUCT_PACKAGES += \
    DolbyManager
-
-# SEPolicy
-BOARD_VENDOR_SEPOLICY_DIRS += vendor/sony/dolby/sepolicy/vendor
 
 # Dolby properties
 PRODUCT_PRODUCT_PROPERTIES += \
@@ -17,6 +18,5 @@ PRODUCT_PRODUCT_PROPERTIES += \
     vendor.audio.dolby.ds2.enabled=false \
     vendor.audio.dolby.ds2.hardbypass=false
 
-# Audio configs
-AUDIO_FEATURE_ENABLED_DS2_DOLBY_DAP := true
-TARGET_EXCLUDES_AUDIOFX := true
+# SEPolicy
+BOARD_VENDOR_SEPOLICY_DIRS += vendor/sony/dolby/sepolicy/vendor
