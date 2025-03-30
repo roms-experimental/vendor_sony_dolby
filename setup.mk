@@ -11,6 +11,12 @@ TARGET_EXCLUDES_AUDIOFX := true
 PRODUCT_PACKAGES += \
    DolbyManager
 
+# Dolby configs
+ifneq ($(TARGET_HAS_DOLBY_CONFIGS),true)
+PRODUCT_COPY_FILES += \
+    $(DOLBY_PATH)/configs/dax-default.xml:vendor/etc/dolby/dax-default.xml
+endif
+
 # Dolby properties
 PRODUCT_PRODUCT_PROPERTIES += \
     persist.vendor.audio_fx.current=dolby \
